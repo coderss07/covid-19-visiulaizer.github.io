@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+	<link href="styles/style.css" rel="stylesheet">
+	<title>Covid-19 Visualizer</title>
+</head>
+<body>
+	<div id="message">Drag screen to move map. Click on pointer to view datails of that state.</div>
+	<div id="info"></div>
+	<div id="india-total"></div>
+	<div id='map'></div>
+	
+</body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script src="index.js"></script>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FydGh1ODU4IiwiYSI6ImNreW10eTJmNTNqa20yb24wZXd4MnYzbHoifQ.5gej7P5ReG0ic0XuohrUOQ';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/sarthu858/cl2om0uq4000n15l20t700nh4',
+		zoom: 4,
+	  	center: [82,25]
+	});
+  </script>
+
+</html>

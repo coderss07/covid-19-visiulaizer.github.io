@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#message {
+    position: fixed;
+    top: -5px;
+    background-color: rgb(116, 0, 0);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    height: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#info {
+    width: 300px;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 10;
+}
+
+#india-total {
+    width: 250px;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 10;
+}
+
+#map{
+    width: 100vw;
+    height: 100vh;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+}
+
+.sub-info {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.sub-info h2 {
+    text-align: center;
+    color: white;
+}
+
+.total-con {
+    width: 80%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    padding: 2px 5px;
+}
+
+.total-con h4, div {
+    margin: 4px 0;
+    color: white;
+}
+
+.total-con div {
+    margin-left: auto;
+}
+
+.total-con a {
+    color: white;
+    cursor: pointer;
+}
+ 
+#marker {
+    /* background-color: black; */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid rgb(95, 0, 0);
+    cursor: pointer;
+}
+
+.location {
+    background-color: rgb(54, 54, 54);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    cursor:default;
+}
+
+.location h2 {
+    margin: 6px 0;
+    color: rgb(212, 212, 212);
+    text-align: center;
+}
+
+.content {
+    /* background-color: red; */
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.content h4 {
+    /* background-color: blue; */
+    margin: 2px 0;
+    font-weight: 10px;
+    color: white;
+}
+
+.content div {
+    /* background-color: green; */
+    margin: 2px 0;
+    color: white;
+    margin-left: auto;
+}
+
+.mapboxgl-control-container {
+    display: none;
+}
