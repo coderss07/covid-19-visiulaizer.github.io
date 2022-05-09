@@ -6,10 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/all.css" rel="stylesheet">
+	<link href="styles/media.css" rel="stylesheet">
 	<title>Covid-19 Visualizer</title>
 </head>
 <body>
-	<div id="message">Drag screen to move map. Click on pointer to view datails of that state.</div>
+	
+	<div id="message"><i class="fa-solid fa-square-info"></i>Drag to move. Click pointer to view datails of that state.</div>
 	<div id="info"></div>
 	<div id="india-total"></div>
 	<div id='map'></div>
@@ -17,6 +20,7 @@
 </body>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
 <script src="index.js"></script>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
 
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FydGh1ODU4IiwiYSI6ImNreW10eTJmNTNqa20yb24wZXd4MnYzbHoifQ.5gej7P5ReG0ic0XuohrUOQ';

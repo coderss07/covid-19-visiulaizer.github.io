@@ -16,6 +16,7 @@ function updateMap() {
 
             var ele = `<div class="location">
                     <h2>${obj1[i].loc}</h2>
+                    <hr class="underline">
                     <div class="content"><h4>Confirmed Cases:</h4> <div>${obj1[i].totalConfirmed}</div> </div>
                     <div class="content"><h4>Active Cases:</h4> <div>${obj1[i].totalConfirmed - obj1[i].discharged}</div> </div>
                     <div class="content"><h4>Deaths:</h4> <div>${obj1[i].deaths}</div> </div>
@@ -31,7 +32,8 @@ function updateMap() {
             .addTo(map);
         }
         var obj = resp1.data.summary;
-        var ele = `<div class="sub-info">
+        var ele = `<i class="fa-solid fa-circle-info btn"></i>
+            <div class="sub-info" id="total-cases">
                 <h2>Total Cases in India</h2>
                 <div class="total-con"><h4>Confirmed Cases: </h4> <div>${obj.confirmedCasesIndian}</div> </div>
                 <div class="total-con"><h4>Active Cases: </h4> <div>${obj.confirmedCasesIndian - obj.discharged}</div> </div>
@@ -42,10 +44,11 @@ function updateMap() {
         document.querySelector('#india-total').innerHTML = ele;
 
         obj = resp1.data;
-        ele = `<div class="sub-info">
+        ele = `<i class="fa-solid fa-square-info btn"></i>
+            <div class="sub-info" id="about">
                 <h2>About Project</h2>
-                <div class="total-con"><h4>Source: </h4> <div> <a href="https://www.covid19india.org/" target="_blank">covid19india.org</a></div> </div>
-                <div class="total-con"><h4>Last refreshed: </h4> <div>${obj.lastRefreshed}</div> </div>
+                <div class="total-con"><h4>Api Source: </h4> <div> <a href="https://www.covid19india.org/" target="_blank">covid19india.org</a></div> </div>
+                <div class="total-con"><h4>Last refreshed: </h4> <div>${resp1.lastRefreshed.substring(0, 10)}</div> </div>
                 <div class="total-con"><h4>Map source: </h4> <div> MapBox</div> </div>
                 <div class="total-con"><h4>Developed By: </h4> <div> Sarthak Sharma</div> </div>
             </div>`

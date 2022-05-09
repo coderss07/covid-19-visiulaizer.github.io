@@ -6,13 +6,32 @@
 #message {
     position: fixed;
     top: -5px;
-    background-color: rgb(116, 0, 0);
     width: 100%;
     text-align: center;
     z-index: 2;
     height: 25px;
     font-weight: bold;
-    font-size: 20px;
+    color: red;
+    font-size: 25px;
+    animation: blinker 1s ease-in-out infinite;
+}
+
+@keyframes blinker {
+    0% {
+        text-shadow: 0 0 0px red;
+    }
+    25% {
+        text-shadow: 0 0 5 rgb(235, 0, 0);
+    }
+    50% {
+        text-shadow: 0 0 10px rgb(204, 0, 0);
+    }
+    75% {
+        text-shadow: 0 0 15px rgb(167, 0, 0);
+    }
+    100% { 
+        text-shadow: 0 0 20px rgb(146, 0, 0);
+    }
 }
 
 #info {
@@ -93,6 +112,13 @@
     align-items: center;
     padding: 10px 10px;
     cursor:default;
+}
+
+.underline {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .location h2 {
